@@ -20,3 +20,9 @@ spec:
         ports:
         - name: nodejs-port
           containerPort: 3000
+      livenessProbe:
+       initialDelaySeconds: 15
+       periodSeconds: 20
+      readinessProbe:
+       initialDelaySeconds: 5
+       periodSeconds: 10
