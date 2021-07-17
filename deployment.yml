@@ -21,8 +21,14 @@ spec:
         - name: nodejs-port
           containerPort: 3000
         livenessProbe:
+         httpGet:
+            scheme: HTTPS
+            path: /
          initialDelaySeconds: 15
          periodSeconds: 20
         readinessProbe:
+         httpGet:
+            scheme: HTTPS
+            path: /
          initialDelaySeconds: 5
          periodSeconds: 10
